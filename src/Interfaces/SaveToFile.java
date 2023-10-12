@@ -1,7 +1,7 @@
 package Interfaces;
 
 public interface SaveToFile<T> {
-    T saveObjectToFile(T obj);
+    <T> boolean saveObjectToFile(T obj, Class<T> type);
 
-    T getObjectFromFile(T obj);
+   <T> boolean getObjectsFromFile(T obj, Class<T> type);
 }

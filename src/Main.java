@@ -1,4 +1,5 @@
-import Interfaces.impl.SaveEmployeeToFile;
+import Interfaces.StudentClassService;
+import Interfaces.impl.StudentClassServiceImpl;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -8,13 +9,14 @@ public class Main {
     //Creating a scanner class
     static Scanner scanner = new Scanner(System.in);
 
-
-
     //Method that handles the manage student menu
     static void manageStudentMenu(){
         //run
         boolean run= true;
         int choice=3;
+
+        //Creating an instance of the service interface
+        StudentClassService studentClassService = new StudentClassServiceImpl();
 
         //The Students menu
         do{
@@ -32,7 +34,7 @@ public class Main {
             }
 
             switch (choice){
-                case 1-> System.out.println("Add Student");
+                case 1-> studentClassService.addStudent();
                 case 2-> System.out.println("Search Student");
                 case 3-> System.out.println("Calculate Percent");
                 case 4-> run=false;

@@ -5,7 +5,11 @@ public class StudentClass extends PersonClass{
     protected Double[] obtainedMarks;
     protected Double[] fullMarks;
 
+
+
     //Constructor
+    public StudentClass(){} //Default
+
     public StudentClass(String name,int age, String email, String address, Double[] obtMarks, Double[] fullMarks){
         super(name, age, email, address);
         obtainedMarks = obtMarks;
