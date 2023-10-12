@@ -1,4 +1,7 @@
+import Exceptions.NameNotFoundException;
+import Interfaces.EmployeeClassService;
 import Interfaces.StudentClassService;
+import Interfaces.impl.EmployeeClassServiceImpl;
 import Interfaces.impl.StudentClassServiceImpl;
 
 import java.util.InputMismatchException;
@@ -24,7 +27,8 @@ public class Main {
             System.out.println("1. Add Student");
             System.out.println("2. Search Student");
             System.out.println("3. Calculate Percent");
-            System.out.println("3. GO BACK");
+            System.out.println("4. Display All Students");
+            System.out.println("5. GO BACK");
 
             try{
                 System.out.print("Enter your choice: ");
@@ -33,13 +37,17 @@ public class Main {
                 System.out.println("Please enter a valid number.");
             }
 
+
             switch (choice){
                 case 1-> studentClassService.addStudent();
-                case 2-> System.out.println("Search Student");
-                case 3-> System.out.println("Calculate Percent");
-                case 4-> run=false;
+                case 2-> studentClassService.displaySearchResult();
+                case 3-> studentClassService.calculatePercentage();
+                case 4 -> studentClassService.displayAllStudent();
+                case 5-> run=false;
                 default -> System.out.println("Please select the correct choice.");
             }
+
+
         }while (run);
     }
 
@@ -49,13 +57,18 @@ public class Main {
         boolean run= true;
         int choice=3;
 
+        //Creating an instance of employee service
+        EmployeeClassService employeeClassService = new EmployeeClassServiceImpl();
+
+
         //The Students menu
         do{
             System.out.println("\nEmployee MENU");
             System.out.println("1. Add Employee");
             System.out.println("2. Search Employee");
-            System.out.println("3. Calculate salary after tax: ");
-            System.out.println("4. GO BACK");
+            System.out.println("3. Calculate Payable Salary");
+            System.out.println("4. Display All Employee");
+            System.out.println("5. GO BACK");
 
             try{
                 System.out.print("Enter your choice: ");
@@ -65,10 +78,11 @@ public class Main {
             }
 
             switch (choice){
-                case 1-> System.out.println("Add Employee");
-                case 2-> System.out.println("Search Employee");
-                case 3-> System.out.println("Calculate salary after tax");
-                case 4-> run=false;
+                case 1-> employeeClassService.addEmployee();
+                case 2-> employeeClassService.displaySearchResult();
+                case 3-> employeeClassService.calculatePayableSalary();
+                case 4 -> employeeClassService.displayAllEmployees();
+                case 5-> run=false;
                 default -> System.out.println("Please enter a correct choice.");
             }
         }while (run);

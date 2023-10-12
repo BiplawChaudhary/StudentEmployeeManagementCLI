@@ -1,15 +1,21 @@
 package Interfaces;
 
 import EntityClasses.StudentClass;
+import Exceptions.NameNotFoundException;
 
 public interface StudentClassService {
 
     //Add Student to File
-    String addStudent();
+    void addStudent();
 
     //Search Student
-    StudentClass searchStudent(String name);
+    StudentClass searchStudent()throws NameNotFoundException;
+
+    void displaySearchResult();
 
     //Calculate the Percentage
-    Double calculatePercentage(Double[] marks);
+    void calculatePercentage();
+
+    //Method that displays all the students.
+    void displayAllStudent();
 }

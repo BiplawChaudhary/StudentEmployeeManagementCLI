@@ -2,7 +2,7 @@ package EntityClasses;
 
 import java.io.Serializable;
 
-public class PersonClass implements Serializable {
+public abstract class PersonClass implements Serializable {
     //Instance Variables
     protected String name;
     protected int age;
@@ -21,12 +21,7 @@ public class PersonClass implements Serializable {
     }
 
     //Get all the details
-    public String getDetails(){
-        return "Name: " + name +
-                "\nAge: " + age +
-                "\nEmail: " + email +
-                "\nAddress: " + address;
-    }
+    public abstract String getDetails();
 
     //------Getters and Setters-----
 
