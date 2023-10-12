@@ -26,8 +26,8 @@ public class SaveToFileImpl<T> implements SaveToFile<T> {
             try(ObjectOutputStream objOut = new ObjectOutputStream(
                     new FileOutputStream("student.txt", true))){
 
-                //Creating a seperator
-                objOut.writeObject("***---***");
+//                //Creating a seperator
+//                objOut.writeObject("***---***");
                 //The code to save to file
                 objOut.writeObject((StudentClass) obj);
                 saved= true;
@@ -42,8 +42,8 @@ public class SaveToFileImpl<T> implements SaveToFile<T> {
             //Opening the file with try-with-resources
             try(ObjectOutputStream objOut = new ObjectOutputStream(
                     new FileOutputStream("employee.txt", true))){
-                //Creating a seperator
-                objOut.writeObject("***---***");
+//                //Creating a seperator
+//                objOut.writeObject("***---***");
                 //The code to save to file
                 objOut.writeObject((EmployeeClass) obj);
                 saved= true;
