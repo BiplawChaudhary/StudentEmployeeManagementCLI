@@ -50,16 +50,12 @@ public class SaveToFileImpl<T> implements SaveToFile<T> {
                 //Update the saved status
                 saved = true;
 
-            }catch (IOException ex){
-                ex.printStackTrace();
-            }
 
-
-        }
 
         //If the passed data is of employee
         else if (type == EmployeeClass.class) {
 //            System.out.println("Employee Class is padded to save object to file.");
+
             //A list to store the read data
             List<EmployeeClass> fileData = null;
 
