@@ -1,5 +1,7 @@
 package EntityClasses;
 
+import java.util.Arrays;
+
 public class StudentClass extends PersonClass{
     //Instance Variables
     protected Double[] obtainedMarks;
@@ -17,7 +19,7 @@ public class StudentClass extends PersonClass{
                 "Age: " + age + "\n" +
                 "Email: " + email + "\n" +
                 "Name: " + address + "\n" +
-                "Marks: " + obtainedMarks + "\n";
+                "Marks: " + Arrays.toString(obtainedMarks) + "\n";
     }
 
     public StudentClass(String name,int age, String email, String address, Double[] obtMarks, Double[] fullMarks){
