@@ -8,7 +8,8 @@ import java.util.HashMap;
 public interface StudentClassService {
 
     //Add Student to File
-    void addStudent(HashMap<String, StudentClass> masterMap);
+//    void addStudent(HashMap<String, StudentClass> masterMap);
+    void addStudent();
 
     //Search Student
     StudentClass searchStudent()throws NameNotFoundException;

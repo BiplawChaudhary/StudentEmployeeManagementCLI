@@ -23,7 +23,7 @@ public class Main {
         //Creating an instance of the service interface
         StudentClassService studentClassService = new StudentClassServiceImpl();
 
-        HashMap<String, StudentClass> masterHashaMap = new HashMap<>();
+//        HashMap<String, StudentClass> masterHashaMap = new HashMap<>();
 
         //The Students menu
         do{
