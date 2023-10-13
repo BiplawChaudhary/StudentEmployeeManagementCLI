@@ -1,9 +1,11 @@
+import EntityClasses.StudentClass;
 import Exceptions.NameNotFoundException;
 import Interfaces.EmployeeClassService;
 import Interfaces.StudentClassService;
 import Interfaces.impl.EmployeeClassServiceImpl;
 import Interfaces.impl.StudentClassServiceImpl;
 
+import java.util.HashMap;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -20,6 +22,8 @@ public class Main {
 
         //Creating an instance of the service interface
         StudentClassService studentClassService = new StudentClassServiceImpl();
+
+        HashMap<String, StudentClass> masterHashaMap = new HashMap<>();
 
         //The Students menu
         do{

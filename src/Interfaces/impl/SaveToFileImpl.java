@@ -23,7 +23,7 @@ public class SaveToFileImpl<T> implements SaveToFile<T> {
 //            System.out.println("Student Class is passed to svae object to file.");
 
             //A list to store the read data
-            List<StudentClass> fileData = null;
+            List<StudentClass> fileData=new ArrayList<>();
 
             //Check if the student.txt alreay exists
             if(new File("student.txt").exists()){
@@ -38,9 +38,6 @@ public class SaveToFileImpl<T> implements SaveToFile<T> {
                 } catch (ClassNotFoundException e) {
                     throw new RuntimeException(e);
                 }
-            }else{
-                //If the file is not found, then create ane array list to store the data.
-                fileData = new ArrayList<>();
             }
 
             //Now add the object to the file
@@ -180,8 +177,6 @@ public class SaveToFileImpl<T> implements SaveToFile<T> {
             }else{
                 System.out.println("NO DATA EXISTS");
             }
-
-
         }
         return returnData;
     }

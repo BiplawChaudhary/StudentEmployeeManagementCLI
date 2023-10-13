@@ -17,7 +17,7 @@ public class StudentClassServiceImpl implements StudentClassService {
     SaveToFile<StudentClass> saveToFile = new SaveToFileImpl();
 
     @Override
-    public void addStudent() {
+    public void addStudent(HashMap<String, StudentClass> masterMap) {
         String name, email, address;
         int age, noOfSubjects;
 
@@ -60,11 +60,10 @@ public class StudentClassServiceImpl implements StudentClassService {
         //Try to save it to the file
         if(saveToFile.saveObjectToFile(std, StudentClass.class)){
             System.out.println("\nSTUDENT SAVE SUCCESSFUL.");
+            masterMap.put(std.getName(), std);
         }else{
             System.out.println("\nSTUDENT SAVE ERROR.");
         }
-
-
     }
 
     @Override

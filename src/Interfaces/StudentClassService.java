@@ -3,10 +3,12 @@ package Interfaces;
 import EntityClasses.StudentClass;
 import Exceptions.NameNotFoundException;
 
+import java.util.HashMap;
+
 public interface StudentClassService {
 
     //Add Student to File
-    void addStudent();
+    void addStudent(HashMap<String, StudentClass> masterMap);
 
     //Search Student
     StudentClass searchStudent()throws NameNotFoundException;
